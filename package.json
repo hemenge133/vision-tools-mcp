@@ -1,0 +1,43 @@
+{
+  "name": "vision-tools-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for vision model integration",
+  "main": "dist/index.js",
+  "bin": {
+    "vision-tools-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --noEmitOnError false",
+    "start": "node -r dotenv/config dist/index.js",
+    "dev": "ts-node -r dotenv/config src/index.ts",
+    "postinstall": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "vision",
+    "ai",
+    "claude",
+    "gpt4"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "form-data": "^4.0.0",
+    "sharp": "^0.33.2",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.19",
+    "@types/ws": "^8.5.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+} 
